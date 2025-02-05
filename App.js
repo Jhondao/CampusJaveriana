@@ -34,10 +34,7 @@ export default function App() {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.card}>
-            <Image
-              source={{ uri: item.image }} // Si las imágenes son locales, usa require().
-              style={styles.image}
-            />
+            <Image source={{ uri: item.image }} style={styles.image} />
             <Text style={styles.title}>{item.title}</Text>
             <Text style={styles.description}>{item.descripcion}</Text>
           </View>
