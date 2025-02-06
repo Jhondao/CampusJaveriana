@@ -30,13 +30,10 @@ export function Main() {
 
   return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <View>
-        <Image
-          source={{
-            uri: "https://www.javerianacali.edu.co/sites/default/files/2023-02/marcaPUJ-Cali_cmyk_azul_no-estucados_lateral%20%281%29_0.png",
-          }}
-          style={{ width: 200, height: 100 }}
-        />
+      <View style={{ paddingVertical: 20 }}>
+        <Text style={{ fontWeight: "bold" }}>
+          Universidad Javeriana de Cali
+        </Text>
       </View>
       <FlatList
         data={edificios}
