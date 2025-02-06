@@ -2,10 +2,17 @@ import { View, StyleSheet, Text, Image } from "react-native";
 
 export function EdificioCard({ edificio }) {
   return (
-    <View key={edificio.id} style={styles.card}>
+    <View
+      key={edificio.id}
+      className="flex-row bg-slate-500/10 p-4 rounded-xl gap-4 mb-10"
+    >
       <Image source={{ uri: edificio.image }} style={styles.image} />
-      <Text style={styles.title}>{edificio.title}</Text>
-      <Text style={styles.description}>{edificio.descripcion}</Text>
+      <View>
+        <Text style={styles.title}>{edificio.title}</Text>
+        <Text className="mt-2 flex-shrink-0" style={styles.description}>
+          {edificio.descripcion.slice(0, 100)}...
+        </Text>
+      </View>
     </View>
   );
 }
