@@ -31,9 +31,7 @@ export function Main() {
   return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
       <View style={{ paddingVertical: 20 }}>
-        <Text style={{ fontWeight: "bold" }}>
-          Universidad Javeriana de Cali
-        </Text>
+        <Text className="font-bold">Universidad Javeriana de Cali</Text>
       </View>
       <FlatList
         data={edificios}
