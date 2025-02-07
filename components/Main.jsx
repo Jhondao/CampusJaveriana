@@ -35,7 +35,7 @@ export function Main() {
         <Text className="font-bold">Universidad Javeriana de Cali</Text>
       </View>
       <Link href="/directoriotel" className="text-black mb-4 font-bold">
-        Ir al Directorio teléfonico administrativo
+        Ir al Directorio teléfonico
       </Link>
       <FlatList
         data={edificios}
