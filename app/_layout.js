@@ -1,14 +1,15 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { Main } from "./components/Main";
+import { Slot } from "expo-router";
+import { StyleSheet, View } from "react-native";
+import "../global.css";
 
-export default function App() {
+export default function Layout() {
   return (
     <SafeAreaProvider>
-      <View style={styles.container}>
+      <View className="flex-1" style={styles.container}>
         <StatusBar style="dark" />
-        <Main />
+        <Slot />
       </View>
     </SafeAreaProvider>
   );

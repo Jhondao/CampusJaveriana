@@ -9,7 +9,7 @@ export function EdificioCard({ edificio }) {
       <Image source={{ uri: edificio.image }} style={styles.image} />
       <View>
         <Text style={styles.title}>{edificio.title}</Text>
-        <Text className="mt-2 flex-shrink-0" style={styles.description}>
+        <Text className="mt-2 flex-shir" style={styles.description}>
           {edificio.descripcion.slice(0, 100)}...
         </Text>
       </View>
