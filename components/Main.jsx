@@ -32,14 +32,20 @@ export function Main() {
 
   return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <View style={{ paddingVertical: 20 }}>
-        <Text className="font-bold">Universidad Javeriana de Cali</Text>
+      <View className="flex-row justify-between items-center py-4">
+        <View style={{ paddingVertical: 20 }}>
+          <Text className="font-bold">Universidad Javeriana de Cali</Text>
+        </View>
+        <Link
+          asChild
+          href="/directoriotel"
+          className="text-black mb-4 font-bold"
+        >
+          <Pressable>
+            <DirectorioTel />
+          </Pressable>
+        </Link>
       </View>
-      <Link asChild href="/directoriotel" className="text-black mb-4 font-bold">
-        <Pressable>
-          <DirectorioTel />
-        </Pressable>
-      </Link>
       <FlatList
         data={edificios}
         keyExtractor={(edificio) => edificio.id.toString()}
