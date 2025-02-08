@@ -1,11 +1,14 @@
 import { Link } from "expo-router";
-import { ScrollView, Text } from "react-native";
+import { Pressable, ScrollView, Text } from "react-native";
+import { Home } from "../components/Icons";
 
 export default function Directorio() {
   return (
-    <ScrollView>
-      <Link href="/" className="text-black mb-4 font-bold mt-24">
-        Ir al home
+    <ScrollView className="pt-24">
+      <Link asChild href="/" className="text-black mb-4 font-bold">
+        <Pressable>
+          <Home />
+        </Pressable>
       </Link>
       <Text className="text-black font-bold mb-8 text-2xl">
         Directorio teléfonico administrativo

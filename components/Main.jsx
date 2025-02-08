@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { View, FlatList, Text } from "react-native";
+import { View, FlatList, Text, Pressable } from "react-native";
 import { Link } from "expo-router";
 import fetchEdificios from "../api/data";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { EdificioCard } from "./EdificioCard";
+import { DirectorioTel } from "./Icons";
 
 export function Main() {
   const [edificios, setEdificios] = useState([]); // Estado para los edificios
@@ -34,8 +35,10 @@ export function Main() {
       <View style={{ paddingVertical: 20 }}>
         <Text className="font-bold">Universidad Javeriana de Cali</Text>
       </View>
-      <Link href="/directoriotel" className="text-black mb-4 font-bold">
-        Ir al Directorio teléfonico
+      <Link asChild href="/directoriotel" className="text-black mb-4 font-bold">
+        <Pressable>
+          <DirectorioTel />
+        </Pressable>
       </Link>
       <FlatList
         data={edificios}
