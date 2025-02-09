@@ -5,6 +5,7 @@ import fetchEdificios from "../api/data";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { EdificioCard } from "./EdificioCard";
 import { DirectorioTel } from "./Icons";
+import Hero from "./Hero";
 
 export function Main() {
   const [edificios, setEdificios] = useState([]); // Estado para los edificios
@@ -46,6 +47,8 @@ export function Main() {
           </Pressable>
         </Link>
       </View>
+          <Hero />
+      
       <FlatList
         data={edificios}
         keyExtractor={(edificio) => edificio.id.toString()}
